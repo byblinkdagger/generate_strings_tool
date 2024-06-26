@@ -13,16 +13,9 @@
 ![image.png](https://upload-images.jianshu.io/upload_images/1432234-73f64169761a671f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-![Android](https://upload-images.jianshu.io/upload_images/1432234-96e71bfa21f12c84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-![iOS](https://upload-images.jianshu.io/upload_images/1432234-7c9e15d88edbf2ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 
 写了一个简单的界面，导入项目后运行UIMain 就能愉快的玩耍了！
 表格格式：
-![image.png](https://upload-images.jianshu.io/upload_images/1432234-53e1eb8e54ac4979.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-
 
 *   注意事项
     key：固定标识，这里 Android 和 iOS 未做区分（可自行拓展后徐芬）
@@ -30,9 +23,7 @@
 
 生成结果：
 
-![Android](https://upload-images.jianshu.io/upload_images/1432234-96e71bfa21f12c84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![iOS](https://upload-images.jianshu.io/upload_images/1432234-7c9e15d88edbf2ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 #### [](#%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E4%B8%80%E7%82%B9%E5%B0%8F%E5%BB%BA%E8%AE%AE)拓展
 - 每次都会读取原本的 xml 文件或者 strings 文件，然后再写进去所以既可以支持新建 key，也可以支持在原本的 key 上修改后，会将修改后的文案直接覆盖。
 
