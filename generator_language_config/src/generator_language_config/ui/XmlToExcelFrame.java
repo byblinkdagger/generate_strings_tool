@@ -46,7 +46,7 @@ public class XmlToExcelFrame extends JFrame implements ActionListener {
 
         openFileTextField = new JTextField(200);
         openFileTextField.setBounds(110, 90, 200, 40);
-        this.add(openFileTextField);
+//        this.add(openFileTextField);
 
         openFileButton = new JButton("输入Res目录");
         openFileButton.setBounds(320, 90, 90, 40);
@@ -81,7 +81,7 @@ public class XmlToExcelFrame extends JFrame implements ActionListener {
             MainFrame frame = new MainFrame();
             XmlToExcelFrame.this.dispose();
         } else if (e.getSource() == openFileButton) {
-//            selectXml();
+            selectXml();
         } else if (e.getSource() == outputFileButton) {
             selectFile();
         } else if (e.getSource() == generatorButton) {
@@ -92,6 +92,7 @@ public class XmlToExcelFrame extends JFrame implements ActionListener {
 
             String text = openFileTextField.getText();
 
+            System.out.println("openFileTextField : "+text);
             if (text == null || text.equals("")) {
                 JOptionPane.showMessageDialog(null, "请选择XML的位置", "提示", JOptionPane.WARNING_MESSAGE);
                 return;
@@ -112,11 +113,12 @@ public class XmlToExcelFrame extends JFrame implements ActionListener {
     private File selectXml() {
         JFileChooser chooser = new JFileChooser();
         chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-        chooser.setAcceptAllFileFilterUsed(false);
-        chooser.addChoosableFileFilter(new XmlFilter());
+//        chooser.setAcceptAllFileFilterUsed(false);
+//        chooser.addChoosableFileFilter(new XmlFilter());
         chooser.showDialog(new JLabel(), "选择");
         File file = chooser.getSelectedFile();
-        if (file != null && file.isDirectory()) {
+        System.out.println("file null? : "+(file == null));
+        if (file != null) {
             openFilePath = file.getAbsolutePath();
             openFileTextField.setText(file.getAbsolutePath());
         }

@@ -101,8 +101,10 @@ public class ExcelUtil {
     }
 
     private void listStringFile(String xmlResPath, Map<String, File> files) {
-        File[] tempList = new File(xmlResPath).listFiles();
-        for (File value : tempList) {
+        System.out.println("xmlResPath : "+xmlResPath);
+        File value = new File(xmlResPath);
+//        System.out.println("tempList : "+tempList.length);
+//        for (File value : tempList) {
             if (value.isFile()) {
                 if (value.getName().equals("strings.xml")) {
                     String parent = value.getParent();
@@ -116,7 +118,7 @@ public class ExcelUtil {
             } else {
 //                System.out.println("不生成 = " + value.toString());
             }
-        }
+//        }
     }
 
 
